@@ -1,5 +1,12 @@
 # splunk-kubernetes
 This project describes how to deploy Splunk Enterprise using Kubernetes. It is based on the [Docker Store](https://store.docker.com/images/splunk) image.
 
-## Steps
-### 
+## Prerequisites
+### Kubernetes Version
+These instructions are written for Kubernetes 1.8 and above.
+
+## Instructions
+### Create Docker Store registry key
+```
+kubectl create secret docker-registry docker-store-registry-key --docker-server="https://index.docker.io/v1/" --docker-username=DOCKER_USER --docker-password=DOCKER_PASSWORD --docker-email=DOCKER_EMAIL
+```
