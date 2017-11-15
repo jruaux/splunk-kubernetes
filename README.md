@@ -10,3 +10,9 @@ These instructions are written for Kubernetes 1.8 and above.
 ```
 kubectl create secret docker-registry docker-store-registry-key --docker-server="https://index.docker.io/v1/" --docker-username=DOCKER_USER --docker-password=DOCKER_PASSWORD --docker-email=DOCKER_EMAIL
 ```
+
+### Create the deployment
+```
+ kubectl create -f manifest.yml
+ ```
+ 
