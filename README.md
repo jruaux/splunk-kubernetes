@@ -33,4 +33,6 @@ Once you have an external IP, open this url in your browser:
 ```
 http://EXTERNAL_IP:8000
 ```
-Log into your Splunk instance with user `admin` and password `changeme`. Voilà!
+Log into your Splunk instance with user `admin` and password `changeme`.
+
+Voilà!
