@@ -18,7 +18,7 @@ kubectl create secret docker-registry docker-store-registry-key --docker-server=
  
 ### Create the services
 ```
-kubectl expose deployment splunk --type="LoadBalancer" --port=443 --target-port=8000
+kubectl expose deployment splunk --type="LoadBalancer" --port=80 --target-port=8000
 ```
 Check the status of the service using:
 ```
@@ -31,7 +31,7 @@ splunk    LoadBalancer   10.39.243.229   <pending>     8000:32425/TCP,8088:30021
 ```
 Once you have an external IP, open this url in your browser:
 ```
-http://EXTERNAL_IP:8000
+http://EXTERNAL_IP
 ```
 Log into your Splunk instance with user `admin` and password `changeme`.
 
