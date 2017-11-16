@@ -16,3 +16,7 @@ kubectl create secret docker-registry docker-store-registry-key --docker-server=
  kubectl create -f manifest.yml
  ```
  
+### Create the services
+```
+kubectl expose deployment splunk-deployment --type="LoadBalancer"
+```
