@@ -1,0 +1,29 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: splunk
+  labels:
+    apps: splunk
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: splunk
+  template:
+    metadata:
+      labels:
+        app: splunk
+    spec:
+      containers:
+        - name: splunk
+          image: store/splunk/enterprise:latest
+          ports:
+            - containerPort: 8000
+            - containerPort: 8088
+          env:
+          - name: SPLUNK_START_ARGS
+            value: --accept-license
+          - name: SPLUNK_USER
+            value: root
+      imagePullSecrets:
+        - name: docker-store-registry-key
