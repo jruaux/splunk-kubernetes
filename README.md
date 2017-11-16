@@ -24,10 +24,10 @@ Check the status of the service using:
 ```
 kubectl get service splunk-deployment
 ```
-You will see this output:
+You will see this output showing the EXTERNAL-IP as pending:
 ```
-NAME                TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)          AGE
-splunk-deployment   LoadBalancer   10.39.249.89   <pending>       8000:30301/TCP   1m
+NAME      TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)                         AGE
+splunk    LoadBalancer   10.39.243.229   <pending>     8000:32425/TCP,8088:30021/TCP   20s
 ```
 Once you have an external IP, open this url in your browser:
 ```
