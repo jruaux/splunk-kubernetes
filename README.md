@@ -18,7 +18,7 @@ kubectl create secret docker-registry docker-store-registry-key --docker-server=
  
 ### Create the services
 ```
-kubectl expose deployment splunk-deployment --type="LoadBalancer"
+kubectl expose deployment splunk --type="LoadBalancer" --port=443 --target-port=8000
 ```
 Check the status of the service using:
 ```
